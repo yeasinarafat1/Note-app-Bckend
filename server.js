@@ -19,6 +19,9 @@ app.use('/auth/login',userlogin)
 app.use('/auth/logout',userlogout)
 app.use('/auth/changepassword',changePasswordRoute)
 app.use('/note',NoteRoute)
+app.get('/',(req,res)=>{
+    res.send('hello world')
+})
 
 
 app.listen(PORT,()=>{
