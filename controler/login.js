@@ -11,11 +11,11 @@ const login =async (req,res)=>{
             gneratecookie(_id,res)
             res.status(200).json({_id,fullName,email,profile})
         } else {
-            res.status(400).json({error:"Incorect password"})
+            res.status(400).json({error:"Invalid email or password"})
         }
     }
     else{
-        res.status(404).json({error:"Invalid email address"})
+        res.status(404).json({error:"Invalid email or password"})
     }
     }
     
